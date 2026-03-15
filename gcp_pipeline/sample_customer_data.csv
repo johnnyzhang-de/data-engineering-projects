@@ -1,1 +1,5 @@
-
+customer_id,name,country,sales
+1,John,US,100
+2,Maria,DE,200
+3,Lee,KR,150
+4,Sara,CA,180
