@@ -1,0 +1,3 @@
+customer_id,customer_name,order_id,order_date,amount,status
+101,Acme Corp,A1001,2026-03-20T10:30:00,1200.5,completed
+102,Beta LLC,B2001,2026-03-19T09:15:00,800.0,completed

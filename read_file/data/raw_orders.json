@@ -1,0 +1,43 @@
+[
+  {
+    "customer_id": 101,
+    "customer_name": "Acme Corp",
+    "orders": [
+      {
+        "order_id": "A1001",
+        "order_date": "2026-03-20T10:30:00",
+        "amount": "1200.50",
+        "status": "completed"
+      },
+      {
+        "order_id": "A1002",
+        "order_date": "2026-03-21T14:00:00",
+        "amount": null,
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "customer_id": 102,
+    "customer_name": "Beta LLC",
+    "orders": [
+      {
+        "order_id": "B2001",
+        "order_date": "2026-03-19T09:15:00",
+        "amount": "800.00",
+        "status": "completed"
+      },
+      {
+        "order_id": "B2001",
+        "order_date": "2026-03-19T09:15:00",
+        "amount": "800.00",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "customer_id": 103,
+    "customer_name": "Gamma Inc",
+    "orders": []
+  }
+]
