@@ -1,0 +1,11 @@
+product_id,product_name,product_category,product_subcategory,vendor_id,standard_cost,list_price
+301,Keyboard,Electronics,Accessories,401,60.00,120.50
+302,Mouse,Electronics,Accessories,402,30.00,80.00
+303,Monitor,Electronics,Displays,401,120.00,180.00
+304,USB Cable,Electronics,Cables,403,5.00,15.00
+305,Laptop Stand,Electronics,Accessories,404,120.00,250.00
+306,Webcam,Electronics,Accessories,405,20.00,35.75
+307,Laptop,Electronics,Computers,406,300.00,500.00
+308,Headphones,Electronics,Audio,402,25.00,60.00
+309,Charger,Electronics,Accessories,404,10.00,22.00
+310,Tablet,Electronics,Computers,405,50.00,95.00
