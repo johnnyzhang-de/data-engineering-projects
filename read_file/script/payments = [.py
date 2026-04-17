@@ -17,49 +17,43 @@ payments = [
         ]
     }
 ]
-
-import pandas as pd
 from collections import Counter
-
-def summarize_payments(payments): 
-    result = {}
+import pandas as pd
+#   user_id  total_payments  total_amount  avg_amount_per_payment top_category
+# 0    U123               2        350.75                  175.38  electronics
+result = {}
+def summarized_payments(payments):
     for payment in payments:
-        # payment_id = payment.get('payment_id')
+        payment_id = payment.get('payment_id')
         user_id = payment.get('user_id')
         if user_id not in result:
-            result[user_id] = {
-                'total_payments' : 0,
-                'total_amount' : 0,
-                'categories' : []
-            }
-        result[user_id]['total_payments'] += 1 
-        # date = payment.get('date')
+            result[user_id] = {'total_payments':0 ,'total_amount': 0, 'categories':[]} 
+        result[user_id]['total_payments'] += 1
         items = payment.get('items')
         for item in items:
-            # item_id = item.get('item_id')
             amount = item.get('amount')
             category = item.get('category')
-            result[user_id]['total_amount'] += amount 
+            result[user_id]['total_amount'] += amount
             result[user_id]['categories'].append(category)
-    # return result
     output = []
-    for k, v in result.items():
+    for k,v in result.items():
         total_payments = v.get('total_payments')
         total_amount = v.get('total_amount')
         avg_amount = round(total_amount/total_payments,2)
-        most_common_category = Counter(v.get('categories')).most_common(1)[0][0]
+        categories = v.get('categories')
+        most_common_category = Counter(categories).most_common(1)[0][0]
         record = {
-        'user_id': k,
-        'total_payments': total_payments,
-        'total_amount': total_amount,
-        'avg_amount_per_payment': avg_amount,
-        'top_category': most_common_category
+            'user_id' : k,
+            'total_amount' : total_amount,
+            'avg_amount':avg_amount,
+            'category':most_common_category
         }
         output.append(record)
-    
     df = pd.DataFrame(output)
     return df
 
 if __name__ == '__main__':
-    df = summarize_payments(payments)
-    print(df)
+    result = summarized_payments(payments)
+    print(result)
+
+
